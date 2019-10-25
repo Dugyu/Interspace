@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: StairsMat
-    second: {fileID: 2100000, guid: 192d72d833c14470cb68ff4ab84d3ec0, type: 2}
+    second: {fileID: 2100000, guid: ab75ab3d5efa04d47b6e4c62d690baa7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -7,7 +7,6 @@ public class ChangeColor : MonoBehaviour
     // Change the Object's Color when it is hit by Player's Gaze
 
 
-    private Collider trigger;
     private int rimPowerId;
     public float fadeSpeed = 0.5f;
     public float min_rimPower = 0.5f;
@@ -46,6 +45,12 @@ public class ChangeColor : MonoBehaviour
         {
             Material mat = other.gameObject.GetComponent<MeshRenderer>().material;
             objsToChangeBackColor.Remove(mat);
+
+            AudioSource audioSource = other.gameObject.GetComponent<AudioSource>();
+            if(audioSource != null && !audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
             Debug.Log("entered");
         }
     }
@@ -78,7 +83,7 @@ public class ChangeColor : MonoBehaviour
             {
                 objsToChangeBackColor.Add(mat);
             }
-            //Debug.Log("exit");
+            
         }
     }
 }

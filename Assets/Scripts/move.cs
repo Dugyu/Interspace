@@ -5,6 +5,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     float y;
+    bool isMoving = true;
     // Start is called before the first frame update
     void Start()
     {
